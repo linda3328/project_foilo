@@ -1,5 +1,7 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import penderMiddleware, { penderReducer } from 'redux-pender';
+import authReducer from './authReducer';
+
 
 export function configuerStore() {
 
@@ -14,7 +16,8 @@ export function configuerStore() {
     //createStore에 첫번째 인자는 리듀서, 두번째 인자는 미들웨어
     return createStore(
         combineReducers({
-            pender: penderReducer
+            pender: penderReducer,
+            auth: authReducer,
         }),
         composed
     )
