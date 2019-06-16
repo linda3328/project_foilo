@@ -6,6 +6,8 @@ import SignupPage from './page/SignupPage';
 import Header from './component/header/Header'
 import Footer from './component/footer/Footer'
 
+
+
 class App extends Component {
   render() {
     return (
