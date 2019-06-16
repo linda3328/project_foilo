@@ -10,6 +10,10 @@ export function signinWithGoogleAPI() {
     return firebase.auth().signInWithPopup(provider)
 }
 
-export function signOutApi() {
+export function signinWithFacebookAPI() {
+    const provider = new firebase.auth.FacebookAuthProvider();
+    return firebase.auth().signInWithPopup(provider)
+}
+export function signOutAPI() {
     return firebase.auth().signOut()
 }

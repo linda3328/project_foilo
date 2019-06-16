@@ -18,14 +18,19 @@ class Signin extends Component {
         console.log('google login')
         this.props.authActions.signinWithGoogle();
     }
+    onFacebookLogin = e => {
+        console.log('Facebook Sign In')
+        this.props.authActions.signinWithFacebook();
+    }
     onSignOut = e => {
         this.props.authActions.signOut();
     }
     render() {
-        const { user, accessToken } = this.props;
+        const { user } = this.props;
         return (
             <div>
                 <button onClick={this.onGoogleLogin}>Google Sign In</button>
+                <button onClick={this.onFacebookLogin}>Facebook Sign In</button>
                 <button onClick={this.onSignOut}>Sign Out</button>
                 <h3>{JSON.stringify(user)}</h3>
 

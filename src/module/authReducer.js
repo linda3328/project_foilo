@@ -1,14 +1,16 @@
 import { handleActions, createAction } from 'redux-actions';
 import { pender } from 'redux-pender';
 import * as types from './actionTypes';
-import { signinAPI, signinWithGoogleAPI, signOutApi } from '../infra/firebase/api';
+import { signinAPI, signinWithGoogleAPI, signOutAPI, signinWithFacebookAPI } from '../infra/firebase/api';
 // import firebase from 'firebase';
 
 //api는 프로마이즈
 // export const signin = createAction(type.SIGN_IN, signinAPI);
 
 export const signinWithGoogle = createAction(types.SIGN_IN_WITH_GOOGLE, signinWithGoogleAPI);
-export const signOut = createAction(types.SIGN_OUT, signOutApi);
+export const signinWithFacebook = createAction(types.SIGN_IN_WITH_FACEBOOK, signinWithFacebookAPI);
+
+export const signOut = createAction(types.SIGN_OUT, signOutAPI);
 export const updateUser = createAction(types.UPDATE_USER);
 
 // //아래 방식을 사용할려면 리덕스썬크를 사용해야됨

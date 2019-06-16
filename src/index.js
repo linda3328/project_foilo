@@ -25,7 +25,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
-//구글 로그인이 되면 여기에 값을 관리해줌
+//API로 유저가 로그인했을때 로그인값이 달라지면 아래 함수가 업데이트해줌!
 firebase.auth().onAuthStateChanged(function (user) {
 
     store.dispatch(authActions.updateUser(user));
